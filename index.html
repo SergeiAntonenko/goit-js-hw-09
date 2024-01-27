@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-js-hw-09</title>
     
+    <script type="module" crossorigin src="/goit-js-hw-09/commonHelpers3.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/vendor-c9def49e.js">
+    <link rel="stylesheet" href="/goit-js-hw-09/assets/vendor-8c8fa3ea.css">
     <link rel="stylesheet" href="/goit-js-hw-09/assets/index-7289bc90.css">
   </head>
   <body>
-    <a class="task-link" href="./partials/1-gallery.html">TO GALLERY</a>
-    <a class="task-link" href="./partials/2-form.html">TO FORM</a>
+    <ul class="gallery"></ul>
+
+    <form class="feedback-form" autocomplete="off">
+  <label class="form-label">
+    Email
+    <input class="form-input" type="email" name="email" autofocus />
+  </label>
+  <label class="form-label">
+    Message
+    <textarea class="form-textarea" name="message" rows="8"></textarea>
+  </label>
+  <button class="form-btn" type="submit">Submit</button>
+</form>
+
+
+    
+    
   </body>
 </html>
