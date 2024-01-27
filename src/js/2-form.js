@@ -8,8 +8,8 @@ form.addEventListener('input', onFormInput);
 form.addEventListener('submit', onFormSubmit);
 
 function onFormInput() {
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
 
   const data = {
     email,
@@ -22,18 +22,22 @@ function onFormInput() {
 function onFormSubmit(e) {
   e.preventDefault();
 
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
 
   const data = {
     email,
     message,
   };
 
-  console.log(data);
+  if (email !== '' && message !== '') {
+    console.log(data);
 
-  localStorage.removeItem(STORAGE_KEY);
-  form.reset();
+    localStorage.removeItem(STORAGE_KEY);
+    form.reset();
+  } else {
+    alert('All fields are required!');
+  }
 }
 
 function saveToLS(key, value) {
