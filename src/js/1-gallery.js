@@ -88,7 +88,7 @@ galleryList.insertAdjacentHTML(
     .join('')
 );
 
-const gallery = new SimpleLightbox('.gallery-item a', {
+const gallery = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
   captionDelay: 250,
